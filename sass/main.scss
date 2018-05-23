@@ -1,0 +1,51 @@
+// Screen Sizes
+$screen-sm-min: 601px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+// Media queries
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
+.brand-logo {
+  height: 56px;
+  @include sm {
+    height: 64px;
+  }
+  img {
+    margin: 0 15px;
+    width: 56px;
+    @include sm {
+      width: 64px;
+    }
+  }
+}
+
+.socialLink {
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: .5em 0;
+  img {
+    width: 40px;
+  }
+}
