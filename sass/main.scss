@@ -1,10 +1,8 @@
-// Screen Sizes
+/*#region Media Queries*/
 $screen-sm-min: 601px;
 $screen-md-min: 768px;
 $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
-
-// Media queries
 @mixin sm {
   @media (min-width: #{$screen-sm-min}) {
       @content;
@@ -25,7 +23,9 @@ $screen-xl-min: 1200px;
       @content;
   }
 }
+/*#endregion*/
 
+/*#region Header*/
 .brand-logo {
   height: 56px;
   @include sm {
@@ -39,7 +39,45 @@ $screen-xl-min: 1200px;
     }
   }
 }
+/*#endregion*/
 
+/*#region Parallax Title*/
+.parallax-container {
+  height: 350px;
+  @include sm {
+    height: 450px;
+  }
+  @include lg {
+    height: 500px;
+  }
+}
+.nameHeader {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 8rem 0 0;
+  @include sm {
+    font-size: 5rem;
+  }
+  @include lg {
+    font-size: 7rem;
+  }
+}
+.nameDesc {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 1rem 0 0;
+  @include sm {
+    font-size: 2rem;
+    margin: 1.52rem 0 0;
+  }
+}
+/*#endregion*/
+
+/*#region Footer*/
 .socialLink {
   display: block;
   height: 40px;
@@ -49,3 +87,4 @@ $screen-xl-min: 1200px;
     width: 40px;
   }
 }
+/*#endregion*/
