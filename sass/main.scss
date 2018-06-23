@@ -1,3 +1,5 @@
+@import "materialize/materialize";
+
 /*#region Media Queries*/
 $screen-sm-min: 601px;
 $screen-md-min: 768px;
@@ -22,6 +24,12 @@ $screen-xl-min: 1200px;
   @media (min-width: #{$screen-xl-min}) {
       @content;
   }
+}
+/*#endregion*/
+
+/*#region All*/
+body {
+  @extend .blue-grey, .lighten-5;
 }
 /*#endregion*/
 
@@ -78,13 +86,50 @@ $screen-xl-min: 1200px;
 /*#endregion*/
 
 #mainIntro {
-  margin: 0 auto;
-  font-size: 1.2rem;
+  @extend .blue-grey, .lighten-1;
+  p {
+    margin: 0 auto;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 992px;
+    padding: 40px 20px;
+    @include sm {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+#indexNav {
+  padding: 40px 0;
   text-align: center;
-  max-width: 992px;
-  padding: 40px 20px;
-  @include sm {
-    font-size: 1.5rem;
+  @include md {
+    padding: 80px 0;
+  }
+  .iconContainer {
+    padding: 20px 30px;
+    @include md {
+      display: inline-block;
+    }
+    @include lg {
+      padding: 20px 40px;
+    }
+    .btn{
+      width: 170px;
+      height: auto;
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease;
+      h5 {
+        display: block;
+      }
+      i {
+        font-size: 6rem;
+        line-height: 1;
+      }
+      &:hover {
+            -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+      }
+    }
   }
 }
 
