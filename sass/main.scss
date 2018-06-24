@@ -152,8 +152,8 @@ body {
 }
 /*#endregion*/
 
-/*#region Experience Page*/
-#experienceHeader {
+/*#region Experience/Projects Page*/
+#experienceHeader, #projectsHeader {
   padding: 0 20px;
   text-align: center;
   margin: 2rem 0 5rem;
@@ -163,7 +163,7 @@ body {
     font-size:6rem;
   }
 }
-.experienceSection {
+.experienceSection, .projectsSection {
   margin: 0 auto 5rem;
   max-width: 992px;
   padding: 0 20px;
