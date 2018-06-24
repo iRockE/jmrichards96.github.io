@@ -190,10 +190,22 @@ body {
     margin-top: 0;
   }
 }
-.padding2 {
-  padding-bottom: 2rem;
-}
 /*#endregion*/
+
+.backToTop {
+  text-align: right;
+  padding: 30px 0 0;
+  a {
+    @extend .grey-text, .text-darken-3;
+    line-height: 56px;
+    font-size: 18px;
+    padding: 0 20px;
+    cursor: pointer;
+    @include sm {
+      line-height: 64px;
+    }
+  }
+}
 
 /*#region Footer*/
 .socialLink {
