@@ -40,15 +40,31 @@ body {
     height: 64px;
   }
   img {
-    margin: 0 15px;
+    box-sizing: content-box;
+    padding: 0 20px;
     width: 56px;
     @include sm {
       width: 64px;
     }
   }
 }
+.breadcrumbNav {
+  margin: 0 auto;
+  max-width: 992px;
+  padding-left: 20px;
+  height: 4rem;
+  .breadcrumb {
+    @extend .grey-text, .text-darken-3;
+    &:before {  
+      @extend .grey-text, .text-darken-3;
+    }
+  }
+  background-color: transparent;
+  box-shadow: none;
+}
 /*#endregion*/
 
+/*#region Index Page*/
 /*#region Parallax Title*/
 .parallax-container {
   height: 350px;
@@ -125,13 +141,58 @@ body {
         font-size: 6rem;
         line-height: 1;
       }
-      &:hover {
-            -webkit-transform: scale(1.08);
-            transform: scale(1.08);
+      @include md {
+        &:hover {
+              -webkit-transform: scale(1.08);
+              transform: scale(1.08);
+        }
       }
     }
   }
 }
+/*#endregion*/
+
+/*#region Experience Page*/
+#experienceHeader {
+  padding: 0 20px;
+  text-align: center;
+  margin: 2rem 0 5rem;
+  font-weight: 100;
+  font-size:4.6rem;
+  @include sm {
+    font-size:6rem;
+  }
+}
+.experienceSection {
+  margin: 0 auto 5rem;
+  max-width: 992px;
+  padding: 0 20px;
+  h2 {
+    font-weight: 100;
+    font-size: 3.8rem;
+    margin-bottom: .8rem;
+    @include sm {
+      font-size:4rem;
+    }
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+  h4 {
+    @extend .grey-text, .text-darken-2;
+    font-size: 1.6rem;
+    margin-top: 0;
+    font-style: italic;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+}
+.padding2 {
+  padding-bottom: 2rem;
+}
+/*#endregion*/
 
 /*#region Footer*/
 .socialLink {
