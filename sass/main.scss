@@ -31,6 +31,10 @@ $screen-xl-min: 1200px;
 body {
   @extend .blue-grey, .lighten-5;
 }
+.pageContent {
+    margin: 0 auto;
+    max-width: 992px;
+}
 /*#endregion*/
 
 /*#region Header*/
@@ -49,8 +53,6 @@ body {
   }
 }
 .breadcrumbNav {
-  margin: 0 auto;
-  max-width: 992px;
   padding-left: 20px;
   height: 4rem;
   .breadcrumb {
@@ -164,8 +166,7 @@ body {
   }
 }
 .experienceSection, .projectsSection {
-  margin: 0 auto 5rem;
-  max-width: 992px;
+  margin: 0 0 5rem;
   padding: 0 20px;
   h2 {
     font-weight: 100;
